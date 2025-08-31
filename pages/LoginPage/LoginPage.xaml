@@ -40,8 +40,8 @@
                                      BindablePassword="{Binding Password}"></components:yPasswordBox>
             <Button HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="30" Margin="10"></Button>
         </StackPanel>
-
-        <StackPanel Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center">
+        <Label Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="5" FontSize="10" Foreground="{Binding InformationColor}" Content="{Binding InformationMsg}"/>
+        <StackPanel Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Margin="10" Content="注册" Command="{Binding registAccountCmd}"></Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Margin="10" Content="登录" Command="{Binding loginAccountCmd}"></Button>
         </StackPanel>

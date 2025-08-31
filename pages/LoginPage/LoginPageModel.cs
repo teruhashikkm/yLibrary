@@ -22,15 +22,17 @@ namespace yLibrary.pages.LoginPage
             Username = "";
             Password = "";
         }
-        public void Login()
+        public bool Login()
         {
             if (Username == "admin" && Password == "123456")
             {
                 MessageBox.Show("登录成功!!");
+                return true;
             }
             else
             {
                 MessageBox.Show("登录失败!!");
+                return false;
             }
         }
     }
