@@ -7,17 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Navigation;
 using System.Windows.Threading;
 using yLibrary.common.commands;
 
 namespace yLibrary.pages.LoginPage
 {
-    public class LoginPageVM: INotifyPropertyChanged
+    public class LoginMainPageVM: INotifyPropertyChanged
     {
-        LoginPageModel loginPageModel;
-        public LoginPageVM()
+        LoginMainPageModel loginPageModel;
+        public LoginMainPageVM()
         {
-            loginPageModel = new LoginPageModel();
+            loginPageModel = new LoginMainPageModel();
             loginAccountCmd = new RelayCommand(ExeLogin, CanLogin);
             registAccountCmd = new RelayCommand(ExeRegist);
             DenpendencyPropertyInit();
@@ -112,6 +113,8 @@ namespace yLibrary.pages.LoginPage
         public ICommand registAccountCmd { get; }
         public ICommand loginAccountCmd { get; }
 
+        public event Action registAccountEvent;
+
         private void ExeLogin(object parameter)
         {
             loginPageModel.Username = Username;
@@ -135,7 +138,8 @@ namespace yLibrary.pages.LoginPage
         }
         private void ExeRegist(object parameter)
         {
-            MessageBox.Show("尚未实现!!");
+            registAccountEvent?.Invoke();
+            // MessageBox.Show("尚未实现!!");
         }
     }
 }

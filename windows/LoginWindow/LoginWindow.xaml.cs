@@ -15,12 +15,12 @@ namespace yLibrary
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class LoginPage : Window
+    public partial class LoginWindow : Window
     {
-        public LoginPage()
+        public LoginWindow()
         {
             InitializeComponent();
-            this.DataContext = new LoginPageVM();
+            LoginFrame.Navigate(new Uri("windows/LoginWindow/LoginMainPage/LoginMainPage.xaml", UriKind.Relative));
         }
     }
 }

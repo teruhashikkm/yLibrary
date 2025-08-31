@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace yLibrary.pages.LoginPage
 {
-    public class LoginPageModel
+    public class LoginMainPageModel
     {
         public String Username
         {
@@ -17,7 +17,7 @@ namespace yLibrary.pages.LoginPage
         {
             get; set;
         }
-        public LoginPageModel()
+        public LoginMainPageModel()
         {
             Username = "";
             Password = "";

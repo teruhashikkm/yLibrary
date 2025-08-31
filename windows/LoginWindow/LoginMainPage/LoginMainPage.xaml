@@ -1,13 +1,14 @@
-﻿<Window x:Class="yLibrary.LoginPage"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:yLibrary"
-        xmlns:page="clr-namespace:yLibrary.pages.LoginPage"
-        xmlns:components="clr-namespace:yLibrary.components"
-        mc:Ignorable="d"
-        Title="Y图书馆" Height="450" Width="800">
+﻿<Page x:Class="yLibrary.windows.LoginWindow.LoginMainPage.LoginMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:yLibrary.windows.LoginWindow.LoginMainPage"
+      xmlns:components="clr-namespace:yLibrary.components"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginMainPage">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -43,9 +44,10 @@
         <Label Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="5" FontSize="10" Foreground="{Binding InformationColor}" Content="{Binding InformationMsg}"/>
         <StackPanel Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Margin="10" Content="注册" Command="{Binding registAccountCmd}"></Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Margin="10" Content="修改/找回密码" Command="{Binding loginAccountCmd}"></Button>
             <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Margin="10" Content="登录" Command="{Binding loginAccountCmd}"></Button>
         </StackPanel>
 
         <Label Grid.Row="6" Grid.Column="1" Content="© 2025. All Rights Reserved. Developed by 348495990@qq.com" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="5" FontSize="15"/>
     </Grid>
-</Window>
+</Page>
