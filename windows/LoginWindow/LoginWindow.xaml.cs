@@ -8,9 +8,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using yLibrary.pages.LoginPage;
+using yLibrary.windows.loginWindow.router;
 
-namespace yLibrary
+namespace yLibrary.windows.loginWindow
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -20,7 +20,7 @@ namespace yLibrary
         public LoginWindow()
         {
             InitializeComponent();
-            LoginFrame.Navigate(new Uri("windows/LoginWindow/LoginMainPage/LoginMainPage.xaml", UriKind.Relative));
+            Router.NavigateTo(MainFrame, "Login");
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace yLibrary.pages.LoginPage
+namespace yLibrary.windows.loginWindow.loginMainPage
 {
     public class LoginMainPageModel
     {

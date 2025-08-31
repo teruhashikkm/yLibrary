@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using yLibrary.pages.LoginPage;
+using yLibrary.windows.loginWindow.router;
 
-namespace yLibrary.windows.LoginWindow.LoginMainPage
+namespace yLibrary.windows.loginWindow.loginMainPage
 {
     /// <summary>
     /// LoginMainPage.xaml 的交互逻辑
@@ -31,7 +31,7 @@ namespace yLibrary.windows.LoginWindow.LoginMainPage
         }
         private void ChangeToRegistPage()
         {
-            NavigationService.Navigate(new Uri("windows/LoginWindow/RegistPage/RegistPage.xaml", UriKind.Relative));
+            Router.NavigateTo(NavigationService, "Regist");
         }
     }
 }

@@ -12,22 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using yLibrary.windows.loginWindow.router;
 
-namespace yLibrary.windows.LoginWindow.RegistPage
+namespace yLibrary.windows.loginWindow.registPage
 {
     /// <summary>
     /// RegistPage.xaml 的交互逻辑
     /// </summary>
     public partial class RegistPage : Page
     {
+        RegistPageVM registPageVM;
         public RegistPage()
         {
             InitializeComponent();
-            this.DataContext = new RegistPageVM();
+            registPageVM = new RegistPageVM();
+            registPageVM.BackToLoginEvent += ChangeToLoginMainPage;
+            this.DataContext = registPageVM;
         }
-        private void ChangeToRegistPage()
+        private void ChangeToLoginMainPage()
         {
-            NavigationService.Navigate(new Uri("windows/LoginWindow/RegistPage/RegistPage.xaml", UriKind.Relative));
+            Router.NavigateTo(NavigationService, "Login");
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Windows.Navigation;
 using System.Windows.Threading;
 using yLibrary.common.commands;
 
-namespace yLibrary.pages.LoginPage
+namespace yLibrary.windows.loginWindow.loginMainPage
 {
     public class LoginMainPageVM: INotifyPropertyChanged
     {

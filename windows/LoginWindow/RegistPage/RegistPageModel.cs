@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace yLibrary.windows.LoginWindow.RegistPage
+namespace yLibrary.windows.loginWindow.registPage
 {
     class RegistPageModel
     {
+        
+
     }
 }
