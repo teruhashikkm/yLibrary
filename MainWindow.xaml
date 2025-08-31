@@ -1,0 +1,48 @@
+﻿<Window x:Class="yLibrary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:yLibrary"
+        mc:Ignorable="d"
+        Title="Y图书馆" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Content="Y图书馆管理系统"></Label>
+        <StackPanel Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Label HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Content="用户名" Width="70" Margin="5"></Label>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="220" Margin="5"></TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Label HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="20" Content="密码" Width="70" Margin="5"></Label>
+            <TextBox HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="180" Margin="5"></TextBox>
+            <Button HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="30" Margin="5"></Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Margin="10" Content="注册"></Button>
+            <Button HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="100" Margin="10" Content="登录"></Button>
+        </StackPanel>
+
+        <Label Grid.Row="6" Grid.Column="1" Content="© 2025. All Rights Reserved. Developed by 348495990@qq.com" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.ColumnSpan="5" FontSize="15"/>
+    </Grid>
+</Window>
