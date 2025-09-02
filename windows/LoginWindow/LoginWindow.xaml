@@ -8,5 +8,5 @@
         xmlns:components="clr-namespace:yLibrary.components"
         mc:Ignorable="d"
         Title="Y图书馆登录窗口" Height="450" Width="800">
-    <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    <Frame x:Name="LoginMainFrame" NavigationUIVisibility="Hidden"/>
 </Window>

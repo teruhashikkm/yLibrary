@@ -21,6 +21,7 @@ namespace yLibrary.windows.loginWindow.loginMainPage
     /// </summary>
     public partial class LoginMainPage : Page
     {
+        LoginWindowRouter Router;
         LoginMainPageVM _loginMainPageVM;
         public LoginMainPage()
         {
@@ -28,6 +29,7 @@ namespace yLibrary.windows.loginWindow.loginMainPage
             LoginMainPageVM _loginMainPageVM = new LoginMainPageVM();
             _loginMainPageVM.registAccountEvent += ChangeToRegistPage;
             this.DataContext = _loginMainPageVM;
+            Router = new LoginWindowRouter();
         }
         private void ChangeToRegistPage()
         {

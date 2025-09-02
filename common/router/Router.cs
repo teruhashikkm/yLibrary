@@ -6,22 +6,18 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 
-namespace yLibrary.windows.loginWindow.router
+namespace yLibrary.common.router
 {
     public class Router
     {
-        public static Dictionary<string, string> Routes = new Dictionary<string, string>
-        {
-            { "Login", "windows/loginWindow/loginMainPage/LoginMainPage.xaml" },
-            { "Regist", "windows/loginWindow/registPage/RegistPage.xaml" },
-        };
+        protected static Dictionary<string, string> Routes;
 
-        public static string GetPath(string routeName)
+        public string GetPath(string routeName)
         {
             return Routes.TryGetValue(routeName, out var path) ? path : null;
         }
 
-        public static void NavigateTo(NavigationService navService, string routeName)
+        public void NavigateTo(NavigationService navService, string routeName)
         {
             var path = GetPath(routeName);
             if (path != null)
@@ -29,18 +25,13 @@ namespace yLibrary.windows.loginWindow.router
                 navService.Navigate(new Uri(path, UriKind.Relative));
             }
         }
-        public static void NavigateTo(Frame frame, string routeName)
+        public void NavigateTo(Frame frame, string routeName)
         {
             var path = GetPath(routeName);
             if (path != null)
             {
                 frame.Navigate(new Uri(path, UriKind.Relative));
             }
-        }
-
-        public static void Fucku()
-        {
-            Console.WriteLine("Fuck");
         }
     }
 }

@@ -21,6 +21,7 @@ namespace yLibrary.windows.loginWindow.registPage
     /// </summary>
     public partial class RegistPage : Page
     {
+        LoginWindowRouter router;
         RegistPageVM registPageVM;
         public RegistPage()
         {
@@ -28,10 +29,11 @@ namespace yLibrary.windows.loginWindow.registPage
             registPageVM = new RegistPageVM();
             registPageVM.BackToLoginEvent += ChangeToLoginMainPage;
             this.DataContext = registPageVM;
+            router = new LoginWindowRouter();
         }
         private void ChangeToLoginMainPage()
         {
-            Router.NavigateTo(NavigationService, "Login");
+            router.NavigateTo(NavigationService, "Login");
         }
     }
 }
