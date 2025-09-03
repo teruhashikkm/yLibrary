@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using yLibrary.windows.loginWindow.loginWindowMsgBus;
 
 namespace yLibrary.windows.loginWindow.loginMainPage
 {
@@ -27,6 +28,7 @@ namespace yLibrary.windows.loginWindow.loginMainPage
             if (Username == "admin" && Password == "123456")
             {
                 MessageBox.Show("登录成功!!");
+                LoginWindowMsgBus.PublishLoginSuccess();
                 return true;
             }
             else

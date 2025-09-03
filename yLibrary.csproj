@@ -8,4 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="windows\functionWindow\adminPage\adminBookPage\" />
+    <Folder Include="windows\functionWindow\adminPage\adminAccountPage\" />
+  </ItemGroup>
+
 </Project>

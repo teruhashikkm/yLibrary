@@ -21,19 +21,19 @@ namespace yLibrary.windows.loginWindow.loginMainPage
     /// </summary>
     public partial class LoginMainPage : Page
     {
-        LoginWindowRouter Router;
+        LoginWindowRouter router;
         LoginMainPageVM _loginMainPageVM;
         public LoginMainPage()
         {
             InitializeComponent();
-            LoginMainPageVM _loginMainPageVM = new LoginMainPageVM();
+            _loginMainPageVM = new LoginMainPageVM();
             _loginMainPageVM.registAccountEvent += ChangeToRegistPage;
             this.DataContext = _loginMainPageVM;
-            Router = new LoginWindowRouter();
+            router = new LoginWindowRouter();
         }
         private void ChangeToRegistPage()
         {
-            Router.NavigateTo(NavigationService, "Regist");
+            router.NavigateTo(NavigationService, "Regist");
         }
     }
 }

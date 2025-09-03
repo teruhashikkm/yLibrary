@@ -13,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace yLibrary.windows.functionWindow.borrowPage
+namespace yLibrary.windows.functionWindow.givebackPage
 {
     /// <summary>
-    /// BorrowPage.xaml 的交互逻辑
+    /// GivebackPage.xaml 的交互逻辑
     /// </summary>
-    public partial class BorrowPage : Page
+    public partial class GivebackPage : Page
     {
-        BorrowPageVM _borrowPageVM;
-        public BorrowPage()
+        public GivebackPage()
         {
             InitializeComponent();
-            _borrowPageVM = new BorrowPageVM();
-            this.DataContext = _borrowPageVM;
         }
     }
 }

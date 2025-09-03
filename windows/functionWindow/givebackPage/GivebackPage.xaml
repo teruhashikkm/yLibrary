@@ -1,12 +1,12 @@
-﻿<Page x:Class="yLibrary.windows.functionWindow.borrowPage.BorrowPage"
+﻿<Page x:Class="yLibrary.windows.functionWindow.givebackPage.GivebackPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:yLibrary.windows.functionWindow.borrowPage"
+      xmlns:local="clr-namespace:yLibrary.windows.functionWindow.givebackPage"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="BorrowPage">
+      Title="GivebackPage">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -39,25 +39,15 @@
             <!-- 什么也没有 -->
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="1" Grid.RowSpan="7" Grid.ColumnSpan="6">
-            <DataGrid VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding BorrowBooks}" AutoGenerateColumns="False">
+            <DataGrid VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" ItemsSource="{Binding xxx}">>
                 <DataGrid.Columns>
-                    <DataGridTemplateColumn>
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <CheckBox IsChecked="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                              HorizontalAlignment="Center"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                    <DataGridTextColumn Width="50" Header="id" Binding="{Binding InternBook.ID}"/>
-                    <DataGridTextColumn Width="70" Header="书名" Binding="{Binding InternBook.Name}"/>
-                    <DataGridTextColumn Header="作者" Binding="{Binding InternBook.Author}"/>
-                    <DataGridTextColumn Header="出版社" Binding="{Binding InternBook.Publisher}"/>
-                    <DataGridTextColumn Header="所属人" Binding="{Binding InternBook.Holder}"/>
-                    <DataGridTextColumn Header="备注" Width="*"/>
+                    <DataGridCheckBoxColumn Header="选取框" Binding="{Binding xxx}"/>
+                    <DataGridTextColumn Width="50" Header="id" Binding="{Binding xxx}"/>
+                    <DataGridTextColumn Width="100" Header="书名" Binding="{Binding xxx}"/>
+                    <DataGridTextColumn Header="当前所在" Binding="{Binding xxx}"/>
+                    <DataGridTextColumn Header="备注" Binding="{Binding xxx}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-            
         </StackPanel>
         <Grid Grid.Row="2" Grid.Column="7" Grid.RowSpan="7" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
@@ -74,7 +64,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Margin="5" Content="借阅" Command="{Binding BorrowCommand}"></Button>
+            <Button Grid.Row="0" Grid.Column="0" Margin="5" Content="归还"></Button>
         </Grid>
         <StackPanel Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="6" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Height="30" Width="100" Margin ="5" Content="返回主页面"></Button>

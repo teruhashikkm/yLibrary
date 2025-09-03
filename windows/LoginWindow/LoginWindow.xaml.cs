@@ -8,6 +8,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using yLibrary.windows.functionWindow;
+using yLibrary.windows.loginWindow.loginWindowMsgBus;
 using yLibrary.windows.loginWindow.router;
 
 namespace yLibrary.windows.loginWindow
@@ -22,7 +24,14 @@ namespace yLibrary.windows.loginWindow
         {
             InitializeComponent();
             router = new LoginWindowRouter();
+            LoginWindowMsgBus.LoginSuccessful += NavigateToFunctionWindow;
             router.NavigateTo(LoginMainFrame, "Login");
+        }
+        public void NavigateToFunctionWindow()
+        {
+            FunctionWindow functionWindow = new FunctionWindow();
+            functionWindow.Show();
+            this.Close();
         }
     }
 }
